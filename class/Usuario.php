@@ -2,13 +2,13 @@
 
 class Usuario {
 
-
+//criacao das variaveis
 	private $idusuario;
 	private $deslogin;
 	private $dessenha;
 	private $dtcadastro;
 
-
+//criacao dos get e set
 	public function getIdusuario(){
 		return $this->idusuario;
 	}
@@ -41,6 +41,8 @@ class Usuario {
 		$this->dtcadastro = $value;
 	}
 
+
+//funcao para leitura do argumento selecionado
 	public function loadById($id){
 
 		$sql = new SQL();
@@ -64,6 +66,7 @@ class Usuario {
 		}
 	}
 
+//funcao para apresentacao do argumento
 	public function __toString(){
 
 		return json_encode(array(
