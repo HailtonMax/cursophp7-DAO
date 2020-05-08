@@ -24,15 +24,15 @@ class SQL extends PDO{
 	}
 
 
-	public function query($rawQuery, $params = array()){
+	public function query($rawQuery, $parameters = array()){
 
-		$stmt = $this->conn->prepare("$rawQuery");
+		$statement = $this->conn->prepare($rawQuery);
 
-		$this->setParams($stmt, $params);
+		$this->setParams($statement, $parameters);
 
-		$stmt->execute();
+		$statement->execute();
 
-		return $stmt;
+		return $statement;
 		
 	}
 
