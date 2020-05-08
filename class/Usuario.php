@@ -158,6 +158,27 @@ public function update($login, $password){
 
 }
 
+public function delete(){
+
+	$sql = new SQL();
+	$sql->query("DELETE FROM tb_usuarios WHERE idusuario = :ID", array(
+
+		":ID"=>$this->getIdusuario()
+
+	));
+
+	$this->setIdusuario(0);
+	$this->setDeslogin("");
+	$this->setDessenha("");
+	$this->setDtcadastro(new DateTime());
+
+
+}
+
+
+
+
+
 //funcao para apresentacao do argumento
 	public function __toString(){
 

@@ -34,13 +34,22 @@ require_once ("config.php");
 //echo $aluno;
 
 //instanciando um usuario
-$usuario=new Usuario();
+//$usuario=new Usuario();
 
 //carregando o usuario determinado
-$usuario->loadById(12);
+//$usuario->loadById(12);
 
 //alterando o usuario escolhido
-$usuario->update("Helena", "aff");
+//$usuario->update("Helena", "aff");
+
+//echo $usuario;
+
+//Deletando um usuario
+$usuario = new Usuario();
+$usuario->loadById(11);
+
+$usuario->delete();
 
 echo $usuario;
+
  ?>
